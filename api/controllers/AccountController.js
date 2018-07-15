@@ -48,9 +48,9 @@ module.exports = {
                 }
 
                 if (publicKeyFromAccount.indexOf(publicKeyFromPrivate) > -1) {
-                    res.send(Message.errMessage('Incorrect Password')) // account and privatekey is not match
-                } else {
                     res.send(Message.successMessage('', { publicKey: publicKeyFromPrivate }))
+                } else {
+                    res.send(Message.errMessage('Incorrect Password')) // account and privatekey is not match
                 }
 
             })
